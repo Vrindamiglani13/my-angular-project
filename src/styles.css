@@ -1,0 +1,165 @@
+
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1E3C72, #2A5298);
+  }
+
+  * {
+    font-family: 'Poppins', sans-serif;
+    color: black !important; 
+  }
+
+  .login-card {
+    width: 350px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1E3C72, #2A5298);
+  }
+  
+  .weather-card {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.15); 
+    color: white; 
+    padding: 20px;
+    background: #ffd7405c !important;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .weather-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .weather-header img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .temp {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .status {
+    font-size: 20px;
+    opacity: 0.8;
+  }
+  
+  .loading {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .spinner {
+    width: 25px;
+    height: 25px;
+    border: 3px solid transparent;
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  mat-card {
+    background: rgba(255, 255, 255, 0.9); 
+    color: #333 !important; 
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  mat-form-field {
+  color: white !important; 
+}
+
+.mat-select-value {
+    color: #333 !important;
+  }
+  
+  .mat-option {
+    color: black !important;
+    background-color: blue !important; 
+  }
+
+input, select {
+  color: black !important; 
+}
+mat-form-field {
+  color: white !important; 
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .forecast-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .forecast-card {
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); 
+    color: #333; 
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .forecast-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .forecast-header img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .temp {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  

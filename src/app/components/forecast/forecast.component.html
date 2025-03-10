@@ -1,0 +1,36 @@
+<div class="forecast-container">
+  <h2>🌦️ 14-Day Weather Forecast</h2>
+
+  <!-- City Selection Heading -->
+  <h3 class="city-name">{{ city }}</h3>
+
+  <div *ngIf="loading" class="loading">
+    <p>Fetching forecast data...</p>
+  </div>
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <!-- Forecast Grid -->
+  <div *ngIf="forecastData?.list?.length" class="forecast-grid">
+    <div *ngFor="let day of forecastData.list; let i = index" class="forecast-card">
+      <p class="date">{{ day.dt_txt | date: 'EEE, MMM d' }}</p>
+      <img
+        [src]="'https://openweathermap.org/img/wn/' + day.weather[0].icon + '.png'"
+        alt="Weather Icon"
+        class="weather-icon"
+      />
+      <p class="temperature">{{ day.main.temp }}°C</p>
+      <p class="weather-desc">{{ day.weather[0].description }}</p>
+      <div class="weather-details">
+        <p> Wind: {{ day.wind.speed }} m/s</p>
+        <p> Clouds: {{ day.clouds.all }}%</p>
+        <p> Humidity: {{ day.main.humidity }}%</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!forecastData?.list?.length && !loading" class="no-data">
+    <p>No forecast data available.</p>
+  </div>
+</div>

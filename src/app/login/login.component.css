@@ -1,0 +1,42 @@
+// Background Styling
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?weather,sky') no-repeat center center;
+    background-size: cover;
+  }
+  
+  // Card Styling
+  .login-card {
+    width: 350px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  // Input Fields
+  .full-width {
+    width: 100%;
+  }
+  
+  // Button Styling
+  .login-btn {
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #1e88e5;
+  }
+  
+  // Register Link
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  

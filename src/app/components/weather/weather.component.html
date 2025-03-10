@@ -1,0 +1,40 @@
+<div class="weather-container">
+  <h2 class="title">🌤 Live Weather Updates</h2>
+
+  <!-- City Selection -->
+  <div class="city-selector">
+    <mat-form-field appearance="outline">
+      <mat-label>Select a City</mat-label>
+      <mat-select [(value)]="selectedCity" (selectionChange)="getWeather()">
+        <mat-option *ngFor="let city of cities" [value]="city">{{ city }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <!-- Loading & Error -->
+  <div class="loading" *ngIf="loading">
+    <span class="spinner"></span> Fetching Weather Data...
+  </div>
+  <div class="error-message" *ngIf="errorMessage">❌ {{ errorMessage }}</div>
+
+  <!-- Weather Info -->
+  <mat-card class="weather-card" *ngIf="weatherData">
+    <div class="weather-header">
+      <h3>{{ weatherData.name }}</h3>
+      <img [src]="'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'" />
+    </div>
+
+    <div class="weather-info">
+      <div class="temp">{{ weatherData.main.temp }}°C</div>
+      <div class="status">{{ weatherData.weather[0].description | titlecase }}</div>
+    </div>
+
+    <div class="weather-details">
+      <p><strong>💧 Humidity:</strong> {{ weatherData.main.humidity }}%</p>
+      <p><strong>☁ Cloudiness:</strong> {{ weatherData.clouds.all }}%</p>
+      <p><strong>🌬 Wind Speed:</strong> {{ weatherData.wind.speed }} m/s</p>
+    </div>
+
+    <button mat-raised-button color="accent"  (click)="goToForecast()">🔮 View 14-Day Forecast</button>
+  </mat-card>
+</div>
